@@ -1,0 +1,90 @@
+/* ================= ABOUT SECTION ================= */
+
+.about-section {
+  min-height: 100vh;
+  padding: 120px 8% 100px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.about-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-tag {
+  color: #9b7cff;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin-bottom: 24px;
+}
+
+.about-container h2 {
+  max-width: 900px;
+  font-size: clamp(42px, 6vw, 82px);
+  line-height: 1.05;
+  letter-spacing: -3px;
+  margin-bottom: 35px;
+  color: #08060d;
+}
+
+.about-container h2 span {
+  color: #9b7cff;
+}
+
+.about-text {
+  max-width: 750px;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #6b6375;
+  margin-bottom: 70px;
+}
+
+.about-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.about-highlights > div {
+  padding: 32px;
+  border: 1px solid #e5e4e7;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.6);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.about-highlights > div:hover {
+  transform: translateY(-8px);
+  border-color: #9b7cff;
+}
+
+.about-highlights h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: #08060d;
+}
+
+.about-highlights p {
+  color: #6b6375;
+  line-height: 1.6;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 90px 6%;
+  }
+
+  .about-container h2 {
+    letter-spacing: -1.5px;
+  }
+
+  .about-highlights {
+    grid-template-columns: 1fr;
+  }
+}
