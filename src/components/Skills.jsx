@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Sparkles, Layers, CheckCircle2, ChevronRight, Info } from "lucide-react";
 import { skillsCategories } from "../data/portfolioData";
+import { TechLogo } from "./TechLogos";
 
 export default function Skills() {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -82,7 +83,9 @@ export default function Skills() {
                         onClick={() => setSelectedSkill({ ...skill, categoryName: cat.name })}
                         data-cursor="INSPECT"
                       >
-                        <span className="skill-pill-icon">{skill.icon}</span>
+                        <span className="skill-pill-icon">
+                          <TechLogo name={skill.name} size={22} />
+                        </span>
                         <div className="skill-pill-meta">
                           <span className="skill-pill-name">{skill.name}</span>
                           <span className={"skill-pill-tier " + tierClass}>{skill.level}</span>
@@ -111,7 +114,9 @@ export default function Skills() {
                 <div className="inspector-body">
                   <div className="inspector-hero-row">
                     <div className="inspector-icon-wrap">
-                      <span className="inspector-big-icon">{selectedSkill.icon}</span>
+                      <span className="inspector-big-icon">
+                        <TechLogo name={selectedSkill.name} size={36} />
+                      </span>
                     </div>
                     <div className="inspector-title-wrap">
                       <h4 className="inspector-tech-title">{selectedSkill.name}</h4>
