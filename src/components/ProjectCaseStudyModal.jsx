@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { X, ArrowUpRight, CheckCircle2, Cpu, Sparkles, BookOpen, Layers, Target, Compass, Code, Award, Lightbulb } from "lucide-react";
 import { GithubIcon } from "./BrandIcons";
+import { TechLogo } from "./TechLogos";
 
 export default function ProjectCaseStudyModal({ project, onClose }) {
   const modalRef = useRef(null);
@@ -82,7 +83,8 @@ export default function ProjectCaseStudyModal({ project, onClose }) {
             <div className="modal-tech-strip">
               {project.techStack.map((tech) => (
                 <span key={tech} className="modal-tech-tag">
-                  {tech}
+                  <TechLogo name={tech} size={14} className="tag-tech-svg" />
+                  <span>{tech}</span>
                 </span>
               ))}
             </div>

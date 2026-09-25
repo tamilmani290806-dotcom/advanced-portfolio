@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Sparkles, Layers, CheckCircle2, ChevronRight, Info } from "lucide-react";
+import { Sparkles, Layers, CheckCircle2, ChevronRight, Info, Lightbulb } from "lucide-react";
 import { skillsCategories } from "../data/portfolioData";
 import { TechLogo } from "./TechLogos";
 
@@ -141,7 +141,8 @@ export default function Skills() {
                   </div>
 
                   <div className="inspector-quick-signal">
-                    <span>💡 Tap any other skill to swap inspection context</span>
+                    <Lightbulb size={13} style={{ display: "inline-block", verticalAlign: "middle", marginRight: "6px", color: "#f97316" }} />
+                    <span>Tap any other skill to swap inspection context</span>
                   </div>
                 </div>
               )}

@@ -393,7 +393,171 @@ export function TechLogo({ name, size = 22, className = "" }) {
         </svg>
       );
 
+    case "streamlit":
+      return (
+        <svg width={size} height={size} viewBox="0 0 24 24" className={className} fill="none">
+          <path
+            d="M12 2.5L18.5 14H5.5L12 2.5Z"
+            fill="#FF4B4B"
+          />
+          <path
+            d="M5.5 14L2 20.5H15L12 15.5H5.5L5.5 14Z"
+            fill="#FF2B2B"
+          />
+          <path
+            d="M18.5 14L22 20.5H9L12 15.5H18.5V14Z"
+            fill="#FFAA4B"
+          />
+        </svg>
+      );
+
+    case "postgresql":
+    case "postgres":
+      return (
+        <svg width={size} height={size} viewBox="0 0 24 24" className={className} fill="none">
+          <path
+            d="M12 2C6.48 2 2 6.48 2 12c0 4.14 2.54 7.69 6.16 9.17-.07-.74-.08-1.7.04-2.45.13-.79.88-3.76.88-3.76s-.22-.45-.22-1.12c0-1.05.61-1.83 1.36-1.83.64 0 .95.48.95 1.06 0 .65-.41 1.62-.63 2.51-.18.75.37 1.36 1.11 1.36 1.33 0 2.35-1.4 2.35-3.43 0-1.79-1.29-3.04-3.13-3.04-2.29 0-3.63 1.72-3.63 3.49 0 .69.27 1.43.6 1.83.07.08.08.15.06.24-.06.26-.2.83-.23.95-.04.16-.13.2-.3.12-1.11-.52-1.8-2.14-1.8-3.44 0-2.8 2.04-5.38 5.88-5.38 3.09 0 5.49 2.2 5.49 5.14 0 3.07-1.93 5.54-4.61 5.54-.9 0-1.75-.47-2.04-1.02l-.56 2.12c-.2.78-.75 1.76-1.12 2.36 1.03.32 2.12.49 3.25.49 5.52 0 10-4.48 10-10S17.52 2 12 2z"
+            fill="#336791"
+          />
+        </svg>
+      );
+
+    case "opencv":
+      return (
+        <svg width={size} height={size} viewBox="0 0 24 24" className={className} fill="none">
+          <circle cx="12" cy="7" r="4.5" stroke="#EA2B2B" strokeWidth="2.5" />
+          <circle cx="7" cy="16" r="4.5" stroke="#00B050" strokeWidth="2.5" />
+          <circle cx="17" cy="16" r="4.5" stroke="#0070C0" strokeWidth="2.5" />
+        </svg>
+      );
+
+    case "mediapipe":
+      return (
+        <svg width={size} height={size} viewBox="0 0 24 24" className={className} fill="none">
+          <rect x="3" y="3" width="18" height="18" rx="4" fill="#0F9D58" />
+          <path d="M7 12l3-5 4 10 3-5" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      );
+
+    case "numpy":
+      return (
+        <svg width={size} height={size} viewBox="0 0 24 24" className={className} fill="none">
+          <rect x="2" y="2" width="20" height="20" rx="4" fill="#4DABCF" />
+          <path d="M7 6v12l10-12v12" stroke="#FFFFFF" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      );
+
+    case "pandas":
+      return (
+        <svg width={size} height={size} viewBox="0 0 24 24" className={className} fill="none">
+          <rect x="4" y="4" width="4" height="16" rx="2" fill="#150458" />
+          <rect x="10" y="8" width="4" height="12" rx="2" fill="#E70488" />
+          <rect x="16" y="11" width="4" height="9" rx="2" fill="#FFD43B" />
+        </svg>
+      );
+
+    case "xgboost":
+    case "random forest":
+      return (
+        <svg width={size} height={size} viewBox="0 0 24 24" className={className} fill="none">
+          <polygon points="12,2 22,8.5 22,15.5 12,22 2,15.5 2,8.5" fill="#22B573" />
+          <path d="M12 6v12M7 10l5 4 5-4" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" />
+        </svg>
+      );
+
+    case "langgraph":
+    case "langchain":
+      return (
+        <svg width={size} height={size} viewBox="0 0 24 24" className={className} fill="none">
+          <rect x="2" y="2" width="20" height="20" rx="5" fill="#1C3C3C" />
+          <circle cx="8" cy="8" r="2.5" fill="#22C55E" />
+          <circle cx="16" cy="8" r="2.5" fill="#38BDF8" />
+          <circle cx="12" cy="16" r="2.5" fill="#EAB308" />
+          <path d="M8 8l4 8 4-8" stroke="#FFFFFF" strokeWidth="1.5" strokeDasharray="2 2" />
+        </svg>
+      );
+
+    case "gemini":
+    case "gemini api":
+    case "google gemini":
+      return (
+        <svg width={size} height={size} viewBox="0 0 24 24" className={className} fill="none">
+          <path
+            d="M12 2C12 7.52 7.52 12 2 12c5.52 0 10 4.48 10 10 0-5.52 4.48-10 10-10-5.52 0-10-4.48-10-10z"
+            fill="url(#gemini-grad)"
+          />
+          <defs>
+            <linearGradient id="gemini-grad" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
+              <stop stopColor="#4E82EE" />
+              <stop offset="0.5" stopColor="#9B72CB" />
+              <stop offset="1" stopColor="#D96570" />
+            </linearGradient>
+          </defs>
+        </svg>
+      );
+
+    case "vite":
+      return (
+        <svg width={size} height={size} viewBox="0 0 24 24" className={className} fill="none">
+          <path d="M21.5 4.5l-9.5 17-9.5-17L12 1.5l9.5 3z" fill="#BD34FE" />
+          <path d="M12.5 4L8 13.5h4.5L11 20l6.5-10h-4.5L15 4h-2.5z" fill="#FFD62E" />
+        </svg>
+      );
+
+    case "tailwind":
+    case "tailwind css":
+    case "modern css":
+      return (
+        <svg width={size} height={size} viewBox="0 0 24 24" className={className} fill="none">
+          <path
+            d="M12 6c-2.4 0-3.9 1.2-4.5 3.6 1-.9 2.1-1.3 3.3-.9.7.2 1.2.7 1.7 1.3C13.4 11 14.8 12.5 18 12.5c2.4 0 3.9-1.2 4.5-3.6-1 .9-2.1 1.3-3.3.9-.7-.2-1.2-.7-1.7-1.3C16.6 7.5 15.2 6 12 6zM6 12.5c-2.4 0-3.9 1.2-4.5 3.6 1-.9 2.1-1.3 3.3-.9.7.2 1.2.7 1.7 1.3C7.4 17.5 8.8 19 12 19c2.4 0 3.9-1.2 4.5-3.6-1 .9-2.1 1.3-3.3.9-.7-.2-1.2-.7-1.7-1.3C10.6 14 9.2 12.5 6 12.5z"
+            fill="#06B6D4"
+          />
+        </svg>
+      );
+
+    case "docker":
+      return (
+        <svg width={size} height={size} viewBox="0 0 24 24" className={className} fill="none">
+          <path
+            d="M13 8h2v2h-2zm-3 0h2v2h-2zm-3 0h2v2H7zm6-3h2v2h-2zm-3 0h2v2h-2zm9 7c-.5-.4-1.4-.4-2-.1-.3-.6-.8-1.2-1.5-1.5-.1 0-.2-.1-.3-.1-.3-.1-.6-.1-.9-.1-.2 0-.3 0-.5.1C18 7.3 15.5 5 12 5c-.3 0-.6 0-.9.1V8H4c-1.1 0-2 .9-2 2v2c0 4.4 3.6 8 8 8 5.3 0 9.7-4 10-9.2.8.2 1.7 0 2.3-.6.6-.5.9-1.3.7-2.2z"
+            fill="#2496ED"
+          />
+        </svg>
+      );
+
+    case "rag":
+    case "vector db":
+    case "chromadb":
+      return (
+        <svg width={size} height={size} viewBox="0 0 24 24" className={className} fill="none">
+          <rect x="3" y="3" width="18" height="18" rx="4" fill="#6366F1" />
+          <circle cx="8" cy="8" r="2" fill="#FFFFFF" />
+          <circle cx="16" cy="8" r="2" fill="#FFFFFF" />
+          <circle cx="12" cy="16" r="2" fill="#FFFFFF" />
+          <line x1="8" y1="8" x2="16" y2="8" stroke="#FFFFFF" strokeWidth="1.5" />
+          <line x1="8" y1="8" x2="12" y2="16" stroke="#FFFFFF" strokeWidth="1.5" />
+          <line x1="16" y1="8" x2="12" y2="16" stroke="#FFFFFF" strokeWidth="1.5" />
+        </svg>
+      );
+
+    case "websockets":
+    case "rest apis":
+    case "json":
+    case "webhooks":
+      return (
+        <svg width={size} height={size} viewBox="0 0 24 24" className={className} fill="none">
+          <rect x="3" y="3" width="18" height="18" rx="4" fill="#0284C7" />
+          <path d="M7 10l-3 2 3 2m10-4l3 2-3 2m-6-6l-2 8" stroke="#FFFFFF" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      );
+
     default:
-      return <span style={{ fontSize: size * 0.9 }}>⚡</span>;
+      return (
+        <svg width={size} height={size} viewBox="0 0 24 24" className={className} fill="none">
+          <rect x="3" y="3" width="18" height="18" rx="4" fill="#334155" />
+          <path d="M8 12h8m-4-4v8" stroke="#94A3B8" strokeWidth="2" strokeLinecap="round" />
+        </svg>
+      );
   }
 }

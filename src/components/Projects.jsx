@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
-import { ArrowUpRight, CheckCircle2, Sparkles, ExternalLink, BookOpen, Layers, Target, Check, AlertCircle } from "lucide-react";
+import { ArrowUpRight, CheckCircle2, Sparkles, ExternalLink, BookOpen, Layers, Target, Check, AlertCircle, ArrowDownToLine, Scale, Zap } from "lucide-react";
 import { GithubIcon } from "./BrandIcons";
+import { TechLogo } from "./TechLogos";
 import { projectsData } from "../data/portfolioData";
 import ProjectCaseStudyModal from "./ProjectCaseStudyModal";
 
@@ -138,17 +139,17 @@ function ProjectMockupVisual({ project }) {
         <div className="mockup-screen-body workflow-screen">
           <div className="workflow-nodes-flow">
             <div className="wf-node n-in">
-              <span className="wf-node-icon">📥</span>
+              <span className="wf-node-icon"><ArrowDownToLine size={13} color="#38BDF8" /></span>
               <span className="wf-node-name">Webhook Intake</span>
             </div>
             <div className="wf-connector-arrow">→</div>
             <div className="wf-node n-eval">
-              <span className="wf-node-icon">⚖️</span>
+              <span className="wf-node-icon"><Scale size={13} color="#A78BFA" /></span>
               <span className="wf-node-name">Policy Decision</span>
             </div>
             <div className="wf-connector-arrow">→</div>
             <div className="wf-node n-out">
-              <span className="wf-node-icon">⚡</span>
+              <span className="wf-node-icon"><Zap size={13} color="#F59E0B" /></span>
               <span className="wf-node-name">Auto-Approved</span>
             </div>
           </div>
@@ -259,7 +260,8 @@ function ImmersiveProjectCard({ project, onOpenCaseStudy }) {
           <div className="showcase-tech-stack-row">
             {project.techStack.map((tech) => (
               <span key={tech} className="showcase-tech-tag">
-                {tech}
+                <TechLogo name={tech} size={14} className="tag-tech-svg" />
+                <span>{tech}</span>
               </span>
             ))}
           </div>
